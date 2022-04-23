@@ -15,21 +15,26 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class TransactionController {
 	
-	@GetMapping("/greeting")
-    public String get(ModelMap model) {
-        model.addAttribute("message", "Hello, World!");
-        return "greeting";
-    }
-	
-	@GetMapping("/greeting1")
-    public String getGreeting() {
-        return "greeting1";
-    }
+//	@GetMapping("/greeting")
+//    public String get(ModelMap model) {
+//        model.addAttribute("message", "Hello, World!");
+//        return "greeting";
+//    }
+//	
+//	@GetMapping("/greeting1")
+//    public String getGreeting() {
+//        return "greeting1";
+//    }
 	
 //	@GetMapping("/index")
 //	public ModelAndView index()
 //	{
 //		return new ModelAndView("index");
 //	}
+	
+	public String uploadDoc() {
+		System.out.print("document uploaded successfully");
+		return null;
+	}
 
 }
