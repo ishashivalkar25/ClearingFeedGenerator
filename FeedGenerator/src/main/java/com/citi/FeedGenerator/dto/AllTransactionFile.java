@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
-public class File {
+public class AllTransactionFile {
 
 	String name;
 	private ArrayList<Transaction> transactions =  new ArrayList<Transaction>();
+	
 }
