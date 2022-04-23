@@ -10,5 +10,5 @@ public interface Repository {
 	public ArrayList<Transaction> readFile(AllTransactionFile file);
 	public boolean isValid(Transaction transaction);
 	public ArrayList<ArrayList<Transaction>> validate(ArrayList<Transaction> allTransactions);
-	public void writeValidFile(ArrayList<Transaction> validTransactions);
+	public void writeValidFile(ArrayList<Transaction> validTransactions); //also write to database
 }
