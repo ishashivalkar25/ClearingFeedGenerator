@@ -90,8 +90,10 @@ public class RepositoryImpl implements Repository {
 	public boolean isValid(Transaction transaction) {
 		// TODO validate each paramenter of a transaction object 
 		
-		//validate refNo
-		//validate date
+		//validate refNo - unique database 
+		
+		
+		//validate date 
 		//validate names ...
 		
 		return false;
