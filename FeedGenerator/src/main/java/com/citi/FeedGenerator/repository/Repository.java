@@ -7,7 +7,7 @@ import com.citi.FeedGenerator.dto.AllTransactionFile;
 import com.citi.FeedGenerator.dto.Transaction;
 
 public interface Repository {
-	public ArrayList<Transaction> readFile(AllTransactionFile file);
+	public ArrayList<Transaction> readFile(String fileName);
 	public boolean isValid(Transaction transaction);
 	public ArrayList<ArrayList<Transaction>> validate(ArrayList<Transaction> allTransactions);
 	public void writeValidFile(ArrayList<Transaction> validTransactions); //also write to database

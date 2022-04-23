@@ -21,11 +21,11 @@ import com.citi.FeedGenerator.dto.Transaction;
 public class RepositoryImpl implements Repository {
 
 	@Override
-	public ArrayList<Transaction> readFile(AllTransactionFile file) {
+	public ArrayList<Transaction> readFile(String fileName) {
 		//returns array list containing all Transactions from file in object Transaction form
 		
 		ArrayList<Transaction> AllTransactionData = new ArrayList<>();
-		String path = "src/main/resources/uploadedFiles/"+file.getName();
+		String path = "src/main/resources/uploadedFiles/"+fileName;
 		BufferedReader bufReader;
 		
 		try {

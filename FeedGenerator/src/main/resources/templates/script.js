@@ -1,4 +1,3 @@
-
 const btn = document.querySelector("button"); // Get the button from the page
 // Detect clicks on the button
 if (btn) {
@@ -7,6 +6,9 @@ if (btn) {
     btn.classList.toggle("dipped");
   };
 }
+
+
+	
 var tabButtons = document.querySelectorAll(
   ".tabContainer .buttonContainer button"
 );

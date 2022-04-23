@@ -48,7 +48,7 @@
           <!--         upload and check buttons section -->
           <div class="flex justify-center">
             <div class="flex flex-col justify-center">
-              <form th:action="@{/users/save}" th:object="${user}" method="post" enctype="multipart/form-data">
+              <form:form method = "GET" action = "/upload">
                 <div class="flex gap-4">
                   <h2 class="text-lg font-semibold">Step 1 :</h2>
 
@@ -59,16 +59,16 @@
                     class="rounded-lg px-4 py-2 bg-blue-600 text-white text-semibold shadow-lg hover:bg-blue-400"
                   />
                 </div>
+                
                 <div class="flex gap-4 mt-4">
                   <h2 class="text-lg font-semibold">Step 2 :</h2>
-                  <button
-                    type="submit"
-                    class="rounded-lg px-4 py-2 bg-blue-600 text-white text-semibold shadow-lg hover:bg-blue-400"
-                  >
+                  <button id = "fileupload" type="submit" class="rounded-lg px-4 py-2 bg-blue-600 text-white text-semibold shadow-lg hover:bg-blue-400"
+                  onclick="uploadFile()">
                     Check
                   </button>
                 </div>
-              </form>
+                
+              </form:form>
             </div>
           </div>
           <div class="flex justify-start ml-16 mt-4">
@@ -230,8 +230,22 @@
       </div>
     </div>
     
-<!--     ------- Scipts ------------------- -->
+<!--     ------- Scripts ------------------- -->
 
+	<script>
+	//code to upload file to springboot 
+	async function uploadFile(){
+		console.log("upload file");
+		let formData = new FormData();
+		formData.append("file", myfile.files[0]);
+		let response = await fetch('/upload', {
+			method: "POST",
+			body: formData
+		});
+	}
+	
+	</script>
+    
     <script
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
