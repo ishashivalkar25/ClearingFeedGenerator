@@ -41,7 +41,6 @@ public class RepositoryImpl implements Repository {
 			    }
 			
 		    for (String i: listOfLines) {
-		    	System.out.println("line: "+i);
 		    	String[] splitData = i.split(" ");
 		    	
 		    	Transaction transaction = new Transaction();
@@ -51,7 +50,6 @@ public class RepositoryImpl implements Repository {
 					
 		    		Date date = new SimpleDateFormat("ddmmyyy").parse(splitData[0].substring(12,20));
 		    		
-		    		System.out.println("Date "+splitData[0].substring(12,20));
 					LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 					
 					Person payer = new Person();
@@ -90,13 +88,18 @@ public class RepositoryImpl implements Repository {
 
 	@Override
 	public boolean isValid(Transaction transaction) {
-		// TODO Auto-generated method stub
+		// TODO validate each paramenter of a transaction object 
+		
+		//validate refNo
+		//validate date
+		//validate names ...
+		
 		return false;
 	}
 
 	@Override
 	public ArrayList<ArrayList<Transaction>> validate(ArrayList<Transaction> allTransactions) {
-		// TODO Auto-generated method stub
+		// TODO create 2 arraylists - valid and invalid transactions
 		return null;
 	}
 
